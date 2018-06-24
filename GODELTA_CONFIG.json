@@ -1,0 +1,16 @@
+{
+    "DEPLOYER_CONFIG": {
+        "public_key": "TODO: Public key on gochain that will be unlocked in unlock_account.js and then used to publish the SC to the blockchain",
+        "private_key": "TODO: Private key used to unlock account. Use an account with just enough gas to publish SC to livenet, as this form of unlock is insecure.",
+        "livenet_rpc_provider": "http://localhost:8545"
+    },
+
+    "CONTRACT_CONFIG": {
+        "contract_admin_public_key": "TODO: Your SC admin address here",
+        "contract_fee_account_public_key": "TODO: This address can be same as admin. Collects fees on trades",
+        "contract_account_levels_public_key": "0x0000000000000000000000000000000000000000",
+        "feeTake": 3000000000000000,
+        "feeMake": 0,
+        "feeRebate": 0
+    }
+}

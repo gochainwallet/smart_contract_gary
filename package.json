@@ -1,0 +1,38 @@
+{
+  "name": "smart_contract",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git"
+  },
+  "require": [
+    "babel-register",
+    "babel-polyfill"
+  ],
+  "scripts": {
+    "start": "./node_modules/.bin/ganache-cli -m \"dead fish racket soul plunger dirty boats cracker mammal nicholas cage\" -p 9545 -i 4",
+
+    "unlock_g": "node ./unlock_account.js \"g\" 180",
+    "migrate_g": "./node_modules/.bin/truffle migrate --network ganache --reset",
+    "test_g": "./node_modules/.bin/truffle test --network ganache",
+
+    "unlock": "node ./unlock_account.js \"l\" 180",
+    "compile": "./node_modules/.bin/truffle compile",
+    "migrate": "./node_modules/.bin/truffle migrate --network live --reset"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.17.0",
+    "babel-register": "^6.23.0",
+    "bignumber.js": "^6.0.0",
+    "ethereumjs-tx": "^1.3.4",
+    "ganache-cli": "^6.1.3",
+    "js-sha256": "^0.9.0",
+    "solc": "^0.4.24",
+    "truffle": "^4.1.11",
+    "web3": "^1.0.0-beta.34"
+  }
+}
